@@ -1,0 +1,2 @@
+- git: repo=https://github.com/walokra/dotfiles dest=~/.dotfiles
+- homebrew: name=stow state=present

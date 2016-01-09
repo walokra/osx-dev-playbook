@@ -1,0 +1,79 @@
+---
+brew_taps:
+  - homebrew/dupes
+  - homebrew/versions
+
+brew_packages:
+  - ansible
+  #- atool # script for managing file archives of various types
+  - gnupg
+  # dev tools
+  - git
+  - node
+  #- pwgen
+  #- pwsafe # create secured and encrypted user name/password list
+  - ssh-copy-id
+  - stow
+  #- tcptraceroute
+  #- tig # ncurses-based text-mode interface for git
+  #- tmux # terminal multiplexer
+  # Install GNU core utilities (those that come with OS X are outdated)
+  # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+  - coreutils
+  # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+  - findutils
+  # Install Bash 4
+  # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
+  # running `chsh`.
+  - bash
+  #
+  - lynx
+  - imagemagick
+  # YLE Areena
+  - yle-dl
+#  - findutils postgres
+#  - findutils maven
+#  - findutils gradle
+#  - findutils jenv
+#  - findutils nvm
+#  - findutils ansible
+  - grep
+  - openssh
+  - screen
+  - bash-completion2
+
+brew_pkg_with_opts:
+  - { pkg: "gnu-sed", opts: "with-default-names" }
+  - { pkg: "vim", opts: "override-system-vi" }
+  - { pkg: "wget", opts: "enable-iri" }
+
+cask_appdir: /Applications
+cask_packages:
+  - dropbox
+  - firefox
+  - google-chrome
+  - iterm2
+  - the-unarchiver
+  - atom
+  - textmate
+  - evernote
+  - telegram
+  - gimp
+  - spotify
+  - vlc
+  - qbittorrent
+#  - eclipse-java
+  - intellij-idea
+  - java
+  - sourcetree
+  - vagrant
+  - vagrant-manager
+  - dockertoolbox
+  - virtualbox
+#  - google-drive
+  - sequel-pro
+  - pgadmin3
+  - disk-inventory-x
+
+npm_modules:
+  - grunt-cli
