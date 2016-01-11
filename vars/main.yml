@@ -16,7 +16,7 @@ brew_packages:
   - stow
   #- tcptraceroute
   #- tig # ncurses-based text-mode interface for git
-  #- tmux # terminal multiplexer
+  - tmux # terminal multiplexer
   # Install GNU core utilities (those that come with OS X are outdated)
   # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
   - coreutils
@@ -37,6 +37,7 @@ brew_packages:
 #  - findutils jenv
 #  - findutils nvm
 #  - findutils ansible
+  # from Taps
   - grep
   - openssh
   - screen
@@ -58,6 +59,8 @@ cask_packages:
   - textmate
   - evernote
   - telegram
+  - slack
+  - flowdock
   - gimp
   - spotify
   - vlc
