@@ -27,3 +27,8 @@ Apps to be manually installed from App Store.
 
 * Xcode
 * Microsoft Remote Desktop
+
+## Apps installed manually
+
+* Oracle SQL Developer
+* SoapUI

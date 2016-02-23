@@ -10,6 +10,8 @@ brew_packages:
   # dev tools
   - git
   - node
+  - maven
+  - gradle
   #- pwgen
   #- pwsafe # create secured and encrypted user name/password list
   - ssh-copy-id
@@ -51,6 +53,7 @@ brew_pkg_with_opts:
 cask_appdir: /Applications
 cask_packages:
   - dropbox
+  - google-drive
   - firefox
   - google-chrome
   - iterm2
@@ -58,7 +61,7 @@ cask_packages:
   - atom
   - textmate
   - evernote
-  - telegram
+  #- telegram
   - slack
   - flowdock
   - gimp
@@ -71,6 +74,7 @@ cask_packages:
   - sourcetree
   - vagrant
   - vagrant-manager
+  # docker, docker-machine, docker-compose, kinematic
   - dockertoolbox
   - virtualbox
 #  - google-drive
