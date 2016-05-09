@@ -75,7 +75,7 @@ cask_packages:
   - vagrant
   - vagrant-manager
   # docker, docker-machine, docker-compose, kinematic
-  - dockertoolbox
+  #- dockertoolbox
   - virtualbox
 #  - google-drive
   - sequel-pro
