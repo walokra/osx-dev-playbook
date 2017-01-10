@@ -9,7 +9,7 @@ brew_packages:
   - gnupg
   # dev tools
   - git
-  - node
+  #- node
   - maven
   - gradle
   #- pwgen
@@ -67,19 +67,17 @@ cask_packages:
   - gimp
   - spotify
   - vlc
-  - qbittorrent
+#  - qbittorrent
 #  - eclipse-java
-  - intellij-idea
+#  - intellij-idea
   - java
   - sourcetree
   - vagrant
   - vagrant-manager
-  # docker, docker-machine, docker-compose, kinematic
-  #- dockertoolbox
-  - virtualbox
+#  - virtualbox
 #  - google-drive
   - sequel-pro
-  - pgadmin3
+  - pgadmin4
   - disk-inventory-x
 
 npm_modules:
