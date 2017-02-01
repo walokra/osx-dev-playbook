@@ -44,6 +44,7 @@ brew_packages:
   - openssh
   - screen
   - bash-completion2
+  - git-standup
 
 brew_pkg_with_opts:
   - { pkg: "gnu-sed", opts: "with-default-names" }
