@@ -38,9 +38,9 @@
       homebrew_cask: name={{item}} state=present
       with_items: "{{ cask_packages }}"
 
-    - name: install npm modules
-      npm: name={{item}} global=yes
-      with_items: "{{ npm_modules }}"
+    #- name: install npm modules
+    #  npm: name={{item}} global=yes
+    #  with_items: "{{ npm_modules }}"
 
     - name: install maven
       homebrew: name={{item}} state=present

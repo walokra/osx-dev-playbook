@@ -6,7 +6,8 @@ brew_taps:
 brew_packages:
   - ansible
   #- atool # script for managing file archives of various types
-  - gnupg
+  - gpg
+  - pinentry-mac
   # dev tools
   - git
   #- node
@@ -48,6 +49,7 @@ brew_packages:
 
 brew_pkg_with_opts:
   - { pkg: "gnu-sed", opts: "with-default-names" }
+  - { pkg: "grep", opts: "with-default-names" }
   - { pkg: "vim", opts: "override-system-vi" }
   - { pkg: "wget", opts: "enable-iri" }
 
@@ -62,10 +64,10 @@ cask_packages:
   - atom
   - textmate
   - evernote
-  #- telegram
+  - telegram
   - slack
   - flowdock
-  - gimp
+  - lisanet-gimp
   - spotify
   - vlc
 #  - qbittorrent
@@ -76,10 +78,11 @@ cask_packages:
   - vagrant
   - vagrant-manager
 #  - virtualbox
-#  - google-drive
   - sequel-pro
   - pgadmin4
   - disk-inventory-x
+  - spectacle
+#  - 1password
 
 npm_modules:
   - grunt-cli
