@@ -27,8 +27,14 @@ Apps to be manually installed from App Store.
 
 * Xcode
 * Microsoft Remote Desktop
+* TweetDeck
+* Gapplin
 
 ## Apps installed manually
 
 * Oracle SQL Developer
-* SoapUI
+* (Suuntolink)[https://www.suunto.com/fi-fi/Tuki/ohjelmistotuki/suuntolink/]
+* (iMazing HEIC Converter)[https://imazing.com/heic]
+* (GoPro Quik)[https://shop.gopro.com/EMEA/softwareandapp/quik-%7C-desktop/Quik-Desktop.html]
+* GoPro Studio (not available)
+

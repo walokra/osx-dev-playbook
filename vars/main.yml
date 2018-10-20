@@ -2,20 +2,20 @@
 brew_taps:
   - homebrew/dupes
   - homebrew/versions
+  - jmespath/jmespath
 
 brew_packages:
-  - ansible
-  #- atool # script for managing file archives of various types
-  - gpg
-  - pinentry-mac
   # dev tools
+  - ansible
   - git
-  #- node
+  - git-standup
+  - node
   - maven
-  - gradle
-  #- pwgen
-  #- pwsafe # create secured and encrypted user name/password list
+  #
+  - gnupg
+  - pinentry-mac
   - ssh-copy-id
+  #
   - stow
   #- tcptraceroute
   #- tig # ncurses-based text-mode interface for git
@@ -25,64 +25,101 @@ brew_packages:
   - coreutils
   # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
   - findutils
-  # Install Bash 4
-  # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-  # running `chsh`.
-  - bash
-  #
-  - lynx
-  - imagemagick
-  # YLE Areena
-  - yle-dl
 #  - findutils postgres
 #  - findutils maven
 #  - findutils gradle
 #  - findutils jenv
 #  - findutils nvm
 #  - findutils ansible
+  # Install Bash 4
+  # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
+  # running `chsh`.
+  - bash
+  #
+  - lynx
+  - yle-dl
+  # smarter cli
+  - bat
+  - prettyping
+  # /usr/local/opt/fzf/install
+  - fzf
+  # ~/.gitconfig
+  #[pager]
+  #       diff = diff-so-fancy | less --tabs=1,5 -RFX
+  #       show = diff-so-fancy | less --tabs=1,5 -RFX
+  - diff-so-fancy
+  - tldr
+  - htop
+  - p7zip
   # from Taps
-  - grep
   - openssh
   - screen
   - bash-completion2
-  - git-standup
+  # monitor the progress of data through a pipe
+  - pv
+  # Command line interface to JMESPath
+  - jp
+  # Install some CTF tools; see https://github.com/ctfs/write-ups.
+  #- zopfli
 
 brew_pkg_with_opts:
   - { pkg: "gnu-sed", opts: "with-default-names" }
-  - { pkg: "grep", opts: "with-default-names" }
+  - { pkg: "grep" }
   - { pkg: "vim", opts: "override-system-vi" }
   - { pkg: "wget", opts: "enable-iri" }
+  - { pkg: "imagemagick", opts: "with-webp" }
 
 cask_appdir: /Applications
 cask_packages:
   - dropbox
   - google-drive
+  #
   - firefox
   - google-chrome
+  #
   - iterm2
   - the-unarchiver
-  - atom
+  #
   - textmate
   - evernote
+  - libreoffice
+  # - yed
+  #
   - telegram
   - slack
   - flowdock
+  #
   - lisanet-gimp
+  - inkscape
+  #
   - spotify
   - vlc
-#  - qbittorrent
-#  - eclipse-java
-#  - intellij-idea
+  #
+  - intellij-idea
+  - visual-studio-code
   - java
+  # 
+  - 1password
+  - cyberduck
   - sourcetree
+  - fork
+  #
+  - postman
+  - soapui
+  #
   - vagrant
-  - vagrant-manager
-#  - virtualbox
+  - virtualbox
+  #
   - sequel-pro
   - pgadmin4
+  # not found - sqldeveloper
+  #
   - disk-inventory-x
   - spectacle
-#  - 1password
+  - go2shell
+  - namechanger
+  # 
+  - teamviewer
+  - vnc-viewer
 
-npm_modules:
-  - grunt-cli
+#npm_modules:
