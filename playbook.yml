@@ -24,8 +24,7 @@
 
     # Brew
     - name: install homebrew packages
-      homebrew: "name={{ item }} state=present"
-      with_items: "{{ brew_packages }}"
+      homebrew: "name={{ brew_packages }} state=present"
 
     - name: install homebrew package(s) with brew options
       homebrew: name={{ item.pkg }} install_options={{ item.opts }} state={{ item.state|default("latest") }}

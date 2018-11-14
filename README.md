@@ -16,6 +16,10 @@ Uses:
 
 See vars/main.yml
 
+## Java
+
+* Brew installs OpenJDK `java`. You can also use `adoptopenjdk`
+
 ## Notes
 
 My dotfiles (https://github.com/walokra/dotfiles) are also installed into the current user's home directory under .dotfiles, including the .osx dotfile for configuring Mac OS X for ease of use. To use them, cd into ~/.dotfiles and ```bash
@@ -29,12 +33,12 @@ Apps to be manually installed from App Store.
 * Microsoft Remote Desktop
 * TweetDeck
 * Gapplin
+* [iMazing HEIC Converter](https://imazing.com/heic)
 
 ## Apps installed manually
 
 * Oracle SQL Developer
-* (Suuntolink)[https://www.suunto.com/fi-fi/Tuki/ohjelmistotuki/suuntolink/]
-* (iMazing HEIC Converter)[https://imazing.com/heic]
-* (GoPro Quik)[https://shop.gopro.com/EMEA/softwareandapp/quik-%7C-desktop/Quik-Desktop.html]
+* [Suuntolink](https://www.suunto.com/fi-fi/Tuki/ohjelmistotuki/suuntolink/) 
+* [GoPro Quik](https://shop.gopro.com/EMEA/softwareandapp/quik-%7C-desktop/Quik-Desktop.html)
 * GoPro Studio (not available)
 

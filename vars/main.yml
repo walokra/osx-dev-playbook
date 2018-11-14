@@ -1,7 +1,5 @@
 ---
 brew_taps:
-  - homebrew/dupes
-  - homebrew/versions
   - jmespath/jmespath
 
 brew_packages:
@@ -64,13 +62,14 @@ brew_packages:
 
 brew_pkg_with_opts:
   - { pkg: "gnu-sed", opts: "with-default-names" }
-  - { pkg: "grep" }
+  - { pkg: "grep", opts: "with-default-names" }
   - { pkg: "vim", opts: "override-system-vi" }
   - { pkg: "wget", opts: "enable-iri" }
   - { pkg: "imagemagick", opts: "with-webp" }
 
 cask_appdir: /Applications
 cask_packages:
+  - java
   - dropbox
   - google-drive
   #
@@ -90,6 +89,7 @@ cask_packages:
   - flowdock
   #
   - lisanet-gimp
+  - xquartz
   - inkscape
   #
   - spotify
