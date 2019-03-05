@@ -1,6 +1,9 @@
 ---
 brew_taps:
+  - caskroom/versions	
   - jmespath/jmespath
+  - AdoptOpenJDK/openjdk
+  - shyiko/ktlint
 
 brew_packages:
   # dev tools
@@ -13,8 +16,6 @@ brew_packages:
   - gnupg
   - pinentry-mac
   - ssh-copy-id
-  #
-  - stow
   #- tcptraceroute
   #- tig # ncurses-based text-mode interface for git
   - tmux # terminal multiplexer
@@ -37,6 +38,7 @@ brew_packages:
   - lynx
   - yle-dl
   # smarter cli
+  # better cat
   - bat
   - prettyping
   # /usr/local/opt/fzf/install
@@ -59,6 +61,7 @@ brew_packages:
   - jp
   # Install some CTF tools; see https://github.com/ctfs/write-ups.
   #- zopfli
+  - ktlint
 
 brew_pkg_with_opts:
   - { pkg: "gnu-sed", opts: "with-default-names" }
@@ -69,9 +72,8 @@ brew_pkg_with_opts:
 
 cask_appdir: /Applications
 cask_packages:
-  - java
+  - adoptopenjdk8
   - dropbox
-  - google-drive
   #
   - firefox
   - google-chrome
