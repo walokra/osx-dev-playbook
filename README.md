@@ -38,6 +38,7 @@ Apps to be manually installed from App Store.
 ## Apps installed manually
 
 * [Docker (CE)](https://store.docker.com/editions/community/docker-ce-desktop-mac)
+* [CutBox](https://github.com/cutbox/CutBox)
 * Oracle SQL Developer
 * [Suuntolink](https://www.suunto.com/fi-fi/Tuki/ohjelmistotuki/suuntolink/) 
 * [GoPro Quik](https://shop.gopro.com/EMEA/softwareandapp/quik-%7C-desktop/Quik-Desktop.html)

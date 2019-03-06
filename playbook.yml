@@ -32,10 +32,12 @@
 
     # Cask
     - name: install homebrew casks
-      # Waits for https://github.com/ansible/ansible-modules-extras/pull/544
       #homebrew_cask: name={{item}} state=present install_options="appdir=homebrew_cask_appdir"
-      homebrew_cask: name={{item}} state=present
+      homebrew_cask: name={{ item }} state=present
       with_items: "{{ cask_packages }}"
+
+    - name: upgrade homebrew casks
+      homebrew_cask: upgrade_all=true
 
     #- name: install npm modules
     #  npm: name={{item}} global=yes

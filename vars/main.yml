@@ -123,5 +123,6 @@ cask_packages:
   # 
   - teamviewer
   - vnc-viewer
+  # - clipy
 
 #npm_modules:
