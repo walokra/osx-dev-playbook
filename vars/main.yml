@@ -72,7 +72,6 @@ brew_pkg_with_opts:
 
 cask_appdir: /Applications
 cask_packages:
-  - adoptopenjdk8
   - dropbox
   #
   - firefox
@@ -99,7 +98,7 @@ cask_packages:
   #
   - intellij-idea
   - visual-studio-code
-  - java
+  - adoptopenjdk8
   # 
   - 1password
   - cyberduck
