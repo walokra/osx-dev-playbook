@@ -2,7 +2,6 @@
 brew_taps:
   - caskroom/versions	
   - jmespath/jmespath
-  - AdoptOpenJDK/openjdk
   - shyiko/ktlint
 
 brew_packages:
@@ -51,6 +50,8 @@ brew_packages:
   - tldr
   - htop
   - p7zip
+  # transparent proxy meets VPN meets ssh
+  - sshuttle
   # from Taps
   - openssh
   - screen
@@ -72,44 +73,44 @@ brew_pkg_with_opts:
 
 cask_appdir: /Applications
 cask_packages:
-  - dropbox
+  # autoupdate - dropbox
   #
-  - firefox
-  - google-chrome
+  # autoupdate - firefox
+  # autoupdate - google-chrome
   #
   - iterm2
   - the-unarchiver
   #
   - textmate
-  - evernote
+  # autoupdate - evernote
   - libreoffice
   # - yed
   #
-  - telegram
-  - slack
-  - flowdock
+  # autoupdate - telegram
+  # autoupdate - slack
+  # autoupdate - flowdock
   #
   - lisanet-gimp
   - xquartz
   - inkscape
   #
-  - spotify
+  # autoupdate - spotify
   - vlc
   #
-  - intellij-idea
-  - visual-studio-code
+  # autoupdate - intellij-idea
+  # autoupdate - visual-studio-code
   - adoptopenjdk8
   # 
-  - 1password
+  # autoupdate - 1password
   - cyberduck
-  - sourcetree
-  - fork
+  # autoupdate - sourcetree
+  #- fork
   #
   - postman
   - soapui
   #
   - vagrant
-  - virtualbox
+  # autoupdate - virtualbox
   #
   - sequel-pro
   - pgadmin4
@@ -122,6 +123,9 @@ cask_packages:
   # 
   - teamviewer
   - vnc-viewer
-  # - clipy
+  # - clipy -> CutBox
 
 #npm_modules:
+
+ruby_gems:
+  - cocoapods
