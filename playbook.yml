@@ -32,13 +32,6 @@
         name: '{{ brew_packages }}'
         state: present
 
-    - name: install homebrew package(s) with brew options
-      homebrew:
-        name: '{{ item.pkg }}'
-        install_options: '{{ item.opts }}'
-        state: '{{ item.state|default("latest") }}'
-      with_items: '{{ brew_pkg_with_opts }}'
-
     # Cask
     - name: install homebrew casks
       #homebrew_cask: name={{item}} state=present install_options='appdir=homebrew_cask_appdir'

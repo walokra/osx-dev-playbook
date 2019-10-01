@@ -64,13 +64,6 @@ brew_packages:
   #- zopfli
   - ktlint
 
-brew_pkg_with_opts:
-  - { pkg: "gnu-sed", opts: "with-default-names" }
-  - { pkg: "grep", opts: "with-default-names" }
-  - { pkg: "vim", opts: "override-system-vi" }
-  - { pkg: "wget", opts: "enable-iri" }
-  - { pkg: "imagemagick", opts: "with-webp" }
-
 cask_appdir: /Applications
 cask_packages:
   # autoupdate - dropbox
