@@ -1,16 +1,15 @@
 ---
 brew_taps:
-  - caskroom/versions	
+  - caskroom/versions
   - jmespath/jmespath
   - shyiko/ktlint
 
 brew_packages:
-  # dev tools
   - ansible
   - git
   - git-standup
   - node
-  - maven
+  #- maven
   #
   - gnupg
   - pinentry-mac
@@ -23,25 +22,18 @@ brew_packages:
   - coreutils
   # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
   - findutils
-#  - findutils postgres
-#  - findutils maven
-#  - findutils gradle
-#  - findutils jenv
-#  - findutils nvm
-#  - findutils ansible
   # Install Bash 4
   # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
   # running `chsh`.
   - bash
   #
-  - lynx
-  - yle-dl
+  #- lynx
+  #- yle-dl
+  #
   # smarter cli
-  # better cat
-  - bat
   - prettyping
   # /usr/local/opt/fzf/install
-  - fzf
+#  - fzf
   # ~/.gitconfig
   #[pager]
   #       diff = diff-so-fancy | less --tabs=1,5 -RFX
@@ -59,66 +51,62 @@ brew_packages:
   # monitor the progress of data through a pipe
   - pv
   # Command line interface to JMESPath
-  - jp
+  - jmespath/jmespath/jp
   # Install some CTF tools; see https://github.com/ctfs/write-ups.
   #- zopfli
   - ktlint
 
 cask_appdir: /Applications
 cask_packages:
-  # autoupdate - dropbox
+# only on 1st install, autoupdate after that
+  # - dropbox
+  # - firefox
+  # - google-chrome
+  # - iterm2
+  # - evernote
+  # - telegram
+  # - slack
+  # - flowdock
+  # - spotify
+  # - intellij-idea
+  # - visual-studio-code
+  # - 1password
+  # - sourcetree
+  # - docker
   #
-  # autoupdate - firefox
-  # autoupdate - google-chrome
-  #
-  - iterm2
   - the-unarchiver
   #
   - textmate
-  # autoupdate - evernote
   - libreoffice
-  # - yed
   #
-  # autoupdate - telegram
-  # autoupdate - slack
-  # autoupdate - flowdock
+  # - xquartz
+  # - inkscape
   #
-  - lisanet-gimp
-  - xquartz
-  - inkscape
-  #
-  # autoupdate - spotify
   - vlc
   #
-  # autoupdate - intellij-idea
-  # autoupdate - visual-studio-code
-  - adoptopenjdk8
-  # 
-  # autoupdate - 1password
+  #- adoptopenjdk8
+  #
   - cyberduck
-  # autoupdate - sourcetree
   #- fork
   #
   - postman
-  - soapui
+  #- soapui
   #
+  - virtualbox
   - vagrant
-  # autoupdate - virtualbox
   #
-  - sequel-pro
-  - pgadmin4
-  # not found - sqldeveloper
+  #- sequel-pro
+  #- pgadmin4
   #
-  - disk-inventory-x
+  - grandperspective
   - spectacle
   - go2shell
   - namechanger
-  # 
+  #
   - teamviewer
   - vnc-viewer
   # - clipy -> CutBox
-
-#npm_modules:
+  - open-in-code
 
 ruby_gems:
   - cocoapods
