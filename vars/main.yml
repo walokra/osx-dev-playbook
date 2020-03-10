@@ -22,10 +22,15 @@ brew_packages:
   - coreutils
   # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
   - findutils
+  - binutils
+  - diffutils
   # Install Bash 4
   # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
   # running `chsh`.
   - bash
+  - gzip
+  - grep
+  - less
   #
   #- lynx
   #- yle-dl
