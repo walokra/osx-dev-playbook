@@ -1,8 +1,8 @@
 ---
 brew_taps:
-  - caskroom/versions
+  #- caskroom/versions
   - jmespath/jmespath
-  - shyiko/ktlint
+  #- shyiko/ktlint
 
 brew_packages:
   - ansible
@@ -70,7 +70,7 @@ brew_packages:
   - jmespath/jmespath/jp
   # Install some CTF tools; see https://github.com/ctfs/write-ups.
   #- zopfli
-  - ktlint
+  #- ktlint
 
 cask_appdir: /Applications
 cask_packages:
@@ -82,13 +82,14 @@ cask_packages:
   # - evernote
   # - telegram
   # - slack
-  # - flowdock
+  ## - flowdock
   # - spotify
-  # - intellij-idea
+  ## - intellij-idea
   # - visual-studio-code
   # - 1password
   # - sourcetree
   # - docker
+  # - alfred3
   #
   - the-unarchiver
   #
@@ -100,6 +101,7 @@ cask_packages:
   #
   - vlc
   #
+  - adoptopenjdk
   #- adoptopenjdk8
   #
   - cyberduck
@@ -109,20 +111,20 @@ cask_packages:
   #- soapui
   #
   - virtualbox
-  - vagrant
+  #- vagrant
   #
   #- sequel-pro
   #- pgadmin4
   #
   - grandperspective
-  - spectacle
+  - rectangle
   - go2shell
   - namechanger
   #
   - teamviewer
   - vnc-viewer
-  # - clipy -> CutBox
   - open-in-code
+  - obs
 
 ruby_gems:
   - cocoapods
