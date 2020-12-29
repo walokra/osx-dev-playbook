@@ -96,18 +96,21 @@ cask_packages:
   - textmate
   - libreoffice
   #
+  - boop
+  #
   # - xquartz
   # - inkscape
   #
   - vlc
+  - calibre
   #
   - adoptopenjdk
   #- adoptopenjdk8
   #
   - cyberduck
-  #- fork
   #
   - postman
+  - insomnia
   #- soapui
   #
   - virtualbox
@@ -115,6 +118,8 @@ cask_packages:
   #
   #- sequel-pro
   #- pgadmin4
+  - dbeaver-community
+  - robo-3t
   #
   - grandperspective
   - rectangle
@@ -124,6 +129,9 @@ cask_packages:
   - teamviewer
   - vnc-viewer
   - open-in-code
+  #
+  - kap
+  - imageoptim
   - obs
 
 ruby_gems:

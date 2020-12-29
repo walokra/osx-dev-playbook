@@ -1,8 +1,9 @@
-# OS X Development Ansible Playbook
+# macOS Development Ansible Playbook
 
-Ansible playbook for automating Mac OS X development machine installation.
+Ansible playbook for automating macOS development machine installation.
 
 Uses:
+
 * [Ansible](http://www.ansible.com/)
 * [Homebrew](http://brew.sh/)
 * [homebrew-cask](https://github.com/caskroom/homebrew-cask)
@@ -30,17 +31,14 @@ source bootstrap.sh```. To set sensible OS X defaults run also ```bash ./.osx```
 Apps to be manually installed from App Store.
 
 * Xcode
+* Alfred
 * Microsoft Remote Desktop
 * TweetDeck
-* Gapplin
 * [iMazing HEIC Converter](https://imazing.com/heic)
 
 ## Apps installed manually
 
 * [Docker (CE)](https://store.docker.com/editions/community/docker-ce-desktop-mac)
 * [CutBox](https://github.com/cutbox/CutBox)
-* Oracle SQL Developer
-* [Suuntolink](https://www.suunto.com/fi-fi/Tuki/ohjelmistotuki/suuntolink/) 
 * [GoPro Quik](https://shop.gopro.com/EMEA/softwareandapp/quik-%7C-desktop/Quik-Desktop.html)
-* GoPro Studio (not available)
-
+* [Hush workflow for Alfred](http://www.packal.org/workflow/shush-mute-your-microphone)
