@@ -22,24 +22,23 @@
     # Tap
     - name: ensure taps are tapped.
       homebrew_tap:
-        name: '{{ item }}'
+        name: "{{ item }}"
         state: present
-      with_items: '{{ brew_taps }}'
+      with_items: "{{ brew_taps }}"
 
     # Brew
     - name: install homebrew packages
       homebrew:
-        name: '{{ brew_packages }}'
+        name: "{{ brew_packages }}"
         state: present
 
     # Cask
     - name: install homebrew casks
-      #homebrew_cask: name={{item}} state=present install_options='appdir=homebrew_cask_appdir'
       homebrew_cask:
-        name: '{{ item }}'
+        name: "{{ item }}"
         state: present
         install_options: force
-      with_items: '{{ cask_packages }}'
+      with_items: "{{ cask_packages }}"
 
     - name: upgrade homebrew casks
       homebrew_cask:

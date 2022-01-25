@@ -8,8 +8,12 @@ brew_packages:
   - ansible
   - git
   - git-standup
-  - node
-  #- maven
+  - node@14
+  - nvm
+  - python3
+  - maven
+  - php
+  #- php@7.4
   #
   - gnupg
   - pinentry-mac
@@ -48,18 +52,14 @@ brew_packages:
   #
   # smarter cli
   - prettyping
-  # /usr/local/opt/fzf/install
-#  - fzf
-  # ~/.gitconfig
-  #[pager]
-  #       diff = diff-so-fancy | less --tabs=1,5 -RFX
-  #       show = diff-so-fancy | less --tabs=1,5 -RFX
+  #
   - diff-so-fancy
+  #
   - tldr
   - htop
   - p7zip
   # transparent proxy meets VPN meets ssh
-  - sshuttle
+  #- sshuttle
   # from Taps
   - openssh
   - screen
@@ -68,23 +68,25 @@ brew_packages:
   - pv
   # Command line interface to JMESPath
   - jmespath/jmespath/jp
-  # Install some CTF tools; see https://github.com/ctfs/write-ups.
-  #- zopfli
   #- ktlint
+  - asimov
+  #
+  - awscli
+  - kubernetes-cli
+  - fastlane
 
 cask_appdir: /Applications
 cask_packages:
-# only on 1st install, autoupdate after that
+  # only on 1st install, autoupdate after that
   # - dropbox
   # - firefox
   # - google-chrome
   # - iterm2
   # - evernote
   # - telegram
+  # - signal
   # - slack
-  ## - flowdock
   # - spotify
-  ## - intellij-idea
   # - visual-studio-code
   # - 1password
   # - sourcetree
@@ -94,18 +96,17 @@ cask_packages:
   - the-unarchiver
   #
   - textmate
-  - libreoffice
+  #- libreoffice
   #
   - boop
   #
   # - xquartz
-  # - inkscape
+  - inkscape
   #
   - vlc
   - calibre
   #
   - adoptopenjdk
-  #- adoptopenjdk8
   #
   - cyberduck
   #
@@ -123,16 +124,20 @@ cask_packages:
   #
   - grandperspective
   - rectangle
-  - go2shell
+  #- go2shell
   - namechanger
   #
   - teamviewer
   - vnc-viewer
+  - microsoft-remote-desktop
   - open-in-code
   #
   - kap
   - imageoptim
-  - obs
+  - webponize
+  #- obs
+  #
+  - google-cloud-sdk
 
 ruby_gems:
   - cocoapods
