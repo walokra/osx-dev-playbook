@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Kill given container
+docker kill $(docker ps -a | grep $1 | awk '{print $1}')
+

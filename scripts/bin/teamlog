@@ -1,0 +1,52 @@
+#!/usr/bin/env python
+
+import os.path
+import git
+import datetime
+from datetime import date
+
+def first_day_of_month(d):
+    return date(d.year, d.month, 1)
+
+def days_ago(d, delta):
+    return d - datetime.timedelta(days=delta)
+
+def is_git_repository(dir):
+    return os.path.isdir(dir) and os.path.exists(os.path.join(dir, ".git"))
+
+def get_git_repositories(a_dir):
+    if is_git_repository(a_dir):
+        prev = os.path.abspath(os.path.join(cwd, ".."))
+        name = os.path.relpath(cwd, prev)
+        return [[name, cwd]]
+    else:
+        return [[name, os.path.abspath(name)] for name in os.listdir(a_dir)
+            if is_git_repository(os.path.join(a_dir, name))]
+
+def get_logs(dir, since):
+    g = git.Git(dir)
+    return g.log('--date=iso', '--pretty=format: %ad%x08%x08%x08%x08%x08%x08%x08%x08%x08 | %an -(%h)- %s', '--since='+ since.isoformat()).splitlines()
+
+def format_logs(project_name, logs):
+    processed_lines = []
+    for log in logs:
+        entry = log.split(' | ')
+        processed_lines.append(entry[0] +" - "+ project_name +" - "+ entry[1])
+    return processed_lines
+
+cwd=os.getcwd()
+projects = get_git_repositories(cwd)
+since = days_ago(date.today(), 7)
+
+print "--------------------------"
+print "Git logs from "+ since.strftime("%d.%m.%Y")
+print "--------------------------"
+
+results = []
+for project in projects:
+    logs = get_logs(project[1], since)
+    results.extend(format_logs(project[0], logs))
+
+results.sort()
+for result in results:
+    print result

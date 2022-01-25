@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Grep all containers
+docker ps -a | grep $1

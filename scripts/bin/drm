@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Remove given container
+#echo "docker kill docker ps -a | grep $1 | awk '{print $1}'"
+docker kill $(docker ps -a | grep $1 | awk '{print $1}')
+#echo "docker rm docker ps -a | grep $1 | awk '{print $1}'"
+docker rm $(docker ps -a | grep $1 | awk '{print $1}')
+

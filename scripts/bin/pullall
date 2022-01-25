@@ -1,0 +1,3 @@
+#!/bin/bash
+#find . -type d -depth 1 -exec echo {} && git -C {} pull \;
+find . -type d -depth 1 -exec echo "----------" \; -exec echo {} \; -exec echo "----------" \; -exec git -C {} pull \; -exec echo "" \;
