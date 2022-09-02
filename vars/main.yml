@@ -7,14 +7,11 @@ brew_taps:
 brew_packages:
   - ansible
   - git
-  - git-standup
-  - node@14
+  #- git-standup
   - nvm
   - python3
   - maven
-  - php
-  #- php@7.4
-  #
+  #- php
   - gnupg
   - pinentry-mac
   - ssh-copy-id
@@ -89,55 +86,57 @@ cask_packages:
   # - spotify
   # - visual-studio-code
   # - 1password
-  # - sourcetree
   # - docker
-  # - alfred3
   #
   - the-unarchiver
   #
   - textmate
   #- libreoffice
   #
-  - boop
+  - boop # Quick utilizies
   #
   # - xquartz
-  - inkscape
+  - inkscape # Vector graphics tool
   #
   - vlc
-  - calibre
+  - calibre # eBooks manager
   #
   - adoptopenjdk
   #
   - cyberduck
   #
+  # API clients and tools
+  #
   - postman
   - insomnia
   #- soapui
   #
+  # Virtual environment tools
+  #
   - virtualbox
-  #- vagrant
+  - vagrant
   #
-  #- sequel-pro
-  #- pgadmin4
-  - dbeaver-community
-  - robo-3t
+  # Database
   #
-  - grandperspective
-  - rectangle
+  - dbeaver-community # database tool
+  #- robo-3t
+  #
+  - grandperspective # show where disk is spent
+  - rectangle # organize windows with shortcuts
   #- go2shell
   - namechanger
   #
   - teamviewer
   - vnc-viewer
   - microsoft-remote-desktop
-  - open-in-code
+  #- open-in-code
   #
-  - kap
-  - imageoptim
-  - webponize
+  - kap # record screen
+  - imageoptim # optimize images for web
   #- obs
   #
   - google-cloud-sdk
+  - maccy # clipboard history
 
 ruby_gems:
   - cocoapods
