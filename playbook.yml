@@ -11,7 +11,8 @@
 
   tasks:
     - name: generate ssh-key
-      command: creates=~/.ssh/id_rsa ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ''
+      command: creates=~/.ssh/id_rsa ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ''
+    
     - include: dotfiles.yml
 
     - name: upgrade homebrew packages
