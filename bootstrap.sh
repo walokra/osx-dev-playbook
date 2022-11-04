@@ -3,7 +3,7 @@ set -e
 
 # install homebrew manually
 if ! which brew >/dev/null 2>&1; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 if ! which ansible >/dev/null 2>&1; then
