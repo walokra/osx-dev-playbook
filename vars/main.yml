@@ -5,138 +5,97 @@ brew_taps:
   #- shyiko/ktlint
 
 brew_packages:
+  - applesimutils
+  - cocoapods
   - ansible
-  - git
-  #- git-standup
-  - nvm
-  - python3
-  - maven
-  #- php
-  - gnupg
-  - pinentry-mac
-  - ssh-copy-id
-  #- tcptraceroute
-  #- tig # ncurses-based text-mode interface for git
-  - tmux # terminal multiplexer
-  # Install GNU core utilities (those that come with OS X are outdated)
-  # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-  - coreutils
-  # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-  - findutils
-  - binutils
-  - diffutils
-  # Install Bash 4
+  - asdf
+  - asimov
+  - awscli
   # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
   # running `chsh`.
   - bash
-  - gzip
-  - grep
-  - less
-  # - gawk
-  # - gnu-indent
-  # - gnu-sed
-  # - gnu-tar
-  # - gnu-which
-  # - screen
-  # - watch
-  # - wdiff
-  # - wget
-  # - gdb
-  # - gpatch
-  #
-  #- lynx
-  #- yle-dl
-  #
-  # smarter cli
-  - prettyping
-  #
-  - diff-so-fancy
-  #
-  - tldr
-  - htop
-  - p7zip
-  # transparent proxy meets VPN meets ssh
-  #- sshuttle
-  # from Taps
-  - openssh
-  - screen
   - bash-completion2
-  # monitor the progress of data through a pipe
-  - pv
+  - binutils
+  # Install GNU core utilities (those that come with OS X are outdated)
+  # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+  - coreutils
+  - diffutils
+  - diff-so-fancy
+  - fastlane
+  # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+  - findutils
+  - foma # for voikko-dev
+  - hfstospell # for voikko-dev
+  - git
+  - grep
+  - gzip
+  #- git-standup
+  - gnupg
+  - htop
   # Command line interface to JMESPath
   - jmespath/jmespath/jp
-  #- ktlint
-  - asimov
-  #
-  - awscli
+  - less
+  - ktlint
   - kubernetes-cli
-  - fastlane
+  - maven
+  - nvm
+  - python3
+  - pinentry-mac
+  - p7zip
+  # monitor the progress of data through a pipe
+  - pv
+  - screen
+  - ssh-copy-id
+  # transparent proxy meets VPN meets ssh
+  #- sshuttle
+  - terraform
+  - terragrunt
+  - tldr
+  #- tcptraceroute
+  #- tmux # terminal multiplexer
 
 cask_appdir: /Applications
 cask_packages:
   # only on 1st install, autoupdate after that
+  # - 1password
+  # - docker
   # - dropbox
+  # - evernote
   # - firefox
   # - google-chrome
   # - iterm2
-  # - evernote
   # - telegram
   # - signal
   # - slack
   # - spotify
   # - visual-studio-code
-  # - 1password
-  # - docker
   #
-  - the-unarchiver
-  #
-  - textmate
-  #- libreoffice
-  #
+  - android-studio
   - boop # Quick utilizies
-  #
-  # - xquartz
-  - inkscape # Vector graphics tool
-  #
-  - vlc
-  - calibre # eBooks manager
-  #
-  - adoptopenjdk
-  #
+  - calibre
+  - chromium
   - cyberduck
-  #
-  # API clients and tools
-  #
-  - postman
-  - insomnia
-  #- soapui
-  #
-  # Virtual environment tools
-  #
-  - virtualbox
-  - vagrant
-  #
-  # Database
-  #
-  - dbeaver-community # database tool
-  #- robo-3t
-  #
-  - grandperspective # show where disk is spent
-  - rectangle # organize windows with shortcuts
+  - dbeaver-community
+  - flipper
   #- go2shell
-  - namechanger
-  #
-  - teamviewer
-  - vnc-viewer
-  - microsoft-remote-desktop
-  #- open-in-code
-  #
-  - kap # record screen
-  - imageoptim # optimize images for web
-  #- obs
-  #
   - google-cloud-sdk
-  - maccy # clipboard history
-
-ruby_gems:
-  - cocoapods
+  - grandperspective # show where disk is spent
+  - imageoptim # optimize images for web
+  #- inkscape
+  - insomnia
+  - kap # record screen
+  - namechanger
+  #- open-in-code
+  - postman
+  - raycast # alfred + maccy combined
+  - rectangle # organize windows with shortcuts
+  #- robo-3t
+  #- soapui
+  - teamviewer
+  - textmate
+  - the-unarchiver
+  - vagrant
+  - virtualbox
+  - vlc
+  - vnc-viewer
+  - zulu11
