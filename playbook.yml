@@ -6,13 +6,32 @@
     - vars/main.yml
 
   pre_tasks:
-    - file: path=~/.ssh mode=0700 state=directory
-    - lineinfile: dest=~/.ssh/known_hosts create=yes state=present line='{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}' regexp='^github.com'
+    - name: add github to known_hosts
+      file: path=~/.ssh mode=0700 state=directory
+      lineinfile: dest=~/.ssh/known_hosts create=yes state=present line='{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}' regexp='^github.com'
+
+    - name: ensure homebrew is installed
+      stat:
+        path: /usr/local/bin/brew
+      register: homebrew_check
+
+    - name: fail if homebrew is not installed
+      fail:
+        msg: homebrew is missing, install from http://brew.sh
+      when:
+        - not homebrew_check.stat.exists
+        - not install_homebrew_if_missing
+
+    - name: installing homebrew
+      shell: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      when:
+        - not homebrew_check.stat.exists
+        - install_homebrew_if_missing
 
   tasks:
     - name: generate ssh-key
       command: creates=~/.ssh/id_rsa ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ''
-    
+
     - include: dotfiles.yml
 
     - name: upgrade homebrew packages
