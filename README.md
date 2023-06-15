@@ -1,4 +1,4 @@
-# macOS Development Ansible Playbook
+# Mac Development Ansible Playbook
 
 Ansible playbook for automating macOS development machine installation.
 
@@ -8,10 +8,18 @@ Uses:
 - [Homebrew](http://brew.sh/)
 - [homebrew-cask](https://github.com/caskroom/homebrew-cask)
 
-## Usage
+Inspired by i.a. [mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook)
 
-- Run `./bootstrap.sh` to install Homebrew and Ansible
-- Further runs with `./ansible.sh`
+## Installation
+
+1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
+1. Run `./bootstrap.sh` to install Homebrew and Ansible
+1. Clone or download this repository to your local drive.
+1. Run `ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
+1. Sign into the Mac App Store via the GUI.
+1. Run playbook with `./ansible.sh`
+
+Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run brew doctor to see if this is the case.
 
 ## Included Applications
 
@@ -26,10 +34,6 @@ See vars/main.yml
   show = diff-so-fancy | less --tabs=1,5 -RFX
 ```
 
-## Java
-
-- Brew installs AdoptOpenJDK `adoptopenjdk`
-
 ## Notes
 
 ### dotfiles
@@ -39,16 +43,3 @@ My dotfiles (https://github.com/walokra/dotfiles) are also installed into the cu
 ### Services
 
 - (asimov)[https://github.com/stevegrunwell/asimov]: exclude project dependencies from Time Machine. `sudo brew services start asimov`
-
-## Apps only available via the App Store
-
-Apps to be manually installed from App Store.
-
-- Xcode
-- TweetDeck
-- [iMazing HEIC Converter](https://imazing.com/heic)
-
-## Apps installed manually
-
-- [Docker (CE)](https://store.docker.com/editions/community/docker-ce-desktop-mac)
-- [GoPro Quik](https://shop.gopro.com/EMEA/softwareandapp/quik-%7C-desktop/Quik-Desktop.html)

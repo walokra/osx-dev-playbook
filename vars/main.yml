@@ -1,5 +1,6 @@
 ---
 install_homebrew_if_missing: false
+configure_dotfiles: true
 
 brew_taps:
   #- caskroom/versions
@@ -58,20 +59,14 @@ brew_packages:
 
 cask_appdir: /Applications
 cask_packages:
-  # only on 1st install, autoupdate after that
-  # - 1password
-  # - docker
-  # - dropbox
-  # - evernote
-  # - firefox
-  # - google-chrome
-  # - iterm2
-  # - telegram
-  # - signal
-  # - slack
-  # - spotify
-  # - visual-studio-code
-  #
+  - docker
+  - dropbox
+  - firefox
+  - google-chrome
+  - iterm2
+  - signal
+  - spotify
+  - visual-studio-code
   - android-studio
   - boop # Quick utilizies
   - calibre

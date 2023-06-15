@@ -5,10 +5,15 @@
   vars_files:
     - vars/main.yml
 
+  vars_prompt:
+    - name: "my_password"
+      prompt: "Enter password"
+      private: true
+
   pre_tasks:
-    - name: add github to known_hosts
-      file: path=~/.ssh mode=0700 state=directory
-      lineinfile: dest=~/.ssh/known_hosts create=yes state=present line='{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}' regexp='^github.com'
+    # - name: add github to known_hosts
+    #   file: path=~/.ssh mode=0700 state=directory
+    #   lineinfile: dest=~/.ssh/known_hosts create=yes state=present line='{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}' regexp='^github.com'
 
     - name: ensure homebrew is installed
       stat:
@@ -28,11 +33,14 @@
         - not homebrew_check.stat.exists
         - install_homebrew_if_missing
 
+  roles:
+    - role: elliotweiser.osx-command-line-tools
   tasks:
     - name: generate ssh-key
       command: creates=~/.ssh/id_rsa ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ''
 
-    - include: dotfiles.yml
+    - include_tasks: dotfiles.yml
+      when: configure_dotfiles
 
     - name: upgrade homebrew packages
       homebrew:
@@ -63,6 +71,18 @@
     - name: upgrade homebrew casks
       homebrew_cask:
         upgrade_all: true
+
+    # - name: set up bash for user
+    #   hosts: localhost
+    #   become: no
+    #   vars:
+    #     the_user: "{{ ansible_user_id }}"
+    #   tasks:
+    #     - name: change user shell to bash
+    #       become: yes
+    #       user:
+    #         name: "{{ the_user }}"
+    #         shell: /usr/local/bin/bash
 
     #- name: install npm modules
     #  npm: name={{item}} global=yes
