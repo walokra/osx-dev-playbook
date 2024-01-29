@@ -91,8 +91,26 @@ cask_packages:
   - teamviewer
   - textmate
   - the-unarchiver
-  - vagrant
-  - virtualbox
+  # - vagrant
+  # - virtualbox
   - vlc
   - vnc-viewer
-  - zulu11
+  #- openjdk@11
+
+mas_installed_apps:
+  - { id: 406056744, name: "Evernote" }
+#   - { id: 462058435, name: "Microsoft Excel" }
+#   - { id: 462054704, name: " Microsoft Word" }
+#   - { id: 462062816, name: " Microsoft Powerpoint" }
+#   - { id: 803453959, name: "Slack" }
+#   # - { id: 747648890, name: "Telegram" }
+#   - { id: 497799835, name: "Xcode" }
+#   # AdGuard for Safari
+#   # 1Password for Safari
+
+mas_uninstalled_apps:
+  # - { id: 408981434, name: "iMovie" }
+  - { id: 409183694, name: "Keynote" }
+  - { id: 409201541, name: "Pages" }
+  - { id: 409203825, name: "Numbers" }
+  - { id: 682658836, name: "GarageBand" }
