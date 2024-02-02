@@ -17,7 +17,7 @@
 
     - name: ensure homebrew is installed
       stat:
-        path: /usr/local/bin/brew
+        path: /opt/homebrew/bin/brew
       register: homebrew_check
 
     - name: fail if homebrew is not installed
@@ -55,11 +55,11 @@
         upgrade_all: yes
 
     # Tap
-    - name: ensure taps are tapped.
-      homebrew_tap:
-        name: "{{ item }}"
-        state: present
-      with_items: "{{ brew_taps }}"
+    #- name: ensure taps are tapped.
+    #  homebrew_tap:
+    #    name: "{{ item }}"
+    #    state: present
+    #  with_items: "{{ brew_taps }}"
 
     # Brew
     - name: install homebrew packages

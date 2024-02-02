@@ -4,18 +4,17 @@ configure_dotfiles: true
 
 brew_taps:
   #- caskroom/versions
-  - jmespath/jmespath
+  #- jmespath/jmespath
   #- shyiko/ktlint
 
 brew_packages:
-  - applesimutils
   - cocoapods
   - ansible
   - asdf
   - asimov
   - awscli
   # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-  # running `chsh`.
+  # running `chsh -s /bin/bash`.
   - bash
   - bash-completion2
   - binutils
@@ -36,10 +35,11 @@ brew_packages:
   - gnupg
   - htop
   # Command line interface to JMESPath
-  - jmespath/jmespath/jp
+  #- jmespath/jmespath/jp
   - less
-  - ktlint
-  - kubernetes-cli
+  - libpq
+  #- ktlint
+  #- kubernetes-cli
   - maven
   - nvm
   - python3
@@ -59,58 +59,49 @@ brew_packages:
 
 cask_appdir: /Applications
 cask_packages:
+  #- android-studio
+  - boop # Quick utilizies
+  - calibre
+  #- chromium
+  #- cyberduck
+  - dbeaver-community
   - docker
   - dropbox
   - firefox
-  - google-chrome
-  - iterm2
-  - signal
-  - spotify
-  - visual-studio-code
-  - android-studio
-  - boop # Quick utilizies
-  - calibre
-  - chromium
-  - cyberduck
-  - dbeaver-community
-  - flipper
-  #- go2shell
+  #- flipper
+  - gimp
   - google-cloud-sdk
+  - google-chrome
+  #- insomnia
   - grandperspective # show where disk is spent
   - imageoptim # optimize images for web
-  #- inkscape
-  - insomnia
+  - iterm2
   - kap # record screen
-  - namechanger
-  #- open-in-code
+  #- openjdk@11
+  - obsidian
   - postman
   - raycast # alfred + maccy combined
   - rectangle # organize windows with shortcuts
   #- robo-3t
+  #- signal
   #- soapui
+  - spotify
   - teamviewer
   - textmate
   - the-unarchiver
   # - vagrant
   # - virtualbox
+  - visual-studio-code
   - vlc
-  - vnc-viewer
-  #- openjdk@11
+  #- vnc-viewer
 
 mas_installed_apps:
   - { id: 406056744, name: "Evernote" }
-#   - { id: 462058435, name: "Microsoft Excel" }
-#   - { id: 462054704, name: " Microsoft Word" }
-#   - { id: 462062816, name: " Microsoft Powerpoint" }
-#   - { id: 803453959, name: "Slack" }
-#   # - { id: 747648890, name: "Telegram" }
-#   - { id: 497799835, name: "Xcode" }
-#   # AdGuard for Safari
-#   # 1Password for Safari
+  - { id: 803453959, name: "Slack" }
 
 mas_uninstalled_apps:
   # - { id: 408981434, name: "iMovie" }
-  - { id: 409183694, name: "Keynote" }
-  - { id: 409201541, name: "Pages" }
-  - { id: 409203825, name: "Numbers" }
-  - { id: 682658836, name: "GarageBand" }
+  #- { id: 409183694, name: "Keynote" }
+  #- { id: 409201541, name: "Pages" }
+  #- { id: 409203825, name: "Numbers" }
+  #- { id: 682658836, name: "GarageBand" }
