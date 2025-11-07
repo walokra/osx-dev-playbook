@@ -28,7 +28,6 @@ brew_packages:
   - foma # for voikko-dev
   - hfstospell # for voikko-dev
   - git
-  - granted # replacement for aws-vault
   - grep
   - gzip
   #- git-standup
@@ -43,15 +42,12 @@ brew_packages:
   - mise # Polyglot runtime manager (asdf rust clone)
   #- nvm # -> mise
   - openssl
-  - python3
   - pinentry-mac
   - p7zip
   - pv # monitor the progress of data through a pipe
   - screen
   - ssh-copy-id
   #- sshuttle # transparent proxy meets VPN meets ssh
-  - terraform
-  - terragrunt
   #- tcptraceroute
   #- tmux # terminal multiplexer
 

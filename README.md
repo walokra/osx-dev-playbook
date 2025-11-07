@@ -43,3 +43,9 @@ My [dotfiles](https://github.com/walokra/dotfiles) are also installed into the c
 ### Services
 
 - [asimov](https://github.com/stevegrunwell/asimov): exclude project dependencies from Time Machine. `sudo brew services start asimov`
+
+## Other
+
+Installed with mise:
+
+- mise install granted nodejs pnpm python terraform
