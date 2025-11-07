@@ -8,15 +8,14 @@ brew_taps:
   #- shyiko/ktlint
 
 brew_packages:
-  - cocoapods
   - ansible
-  - asdf
+  #- asdf # -> mise
   - asimov
   - awscli
   # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
   # running `chsh -s /bin/bash`.
   - bash
-  - bash-completion2
+  - bash-completion@2
   - binutils
   # Install GNU core utilities (those that come with OS X are outdated)
   # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -29,31 +28,30 @@ brew_packages:
   - foma # for voikko-dev
   - hfstospell # for voikko-dev
   - git
+  - granted # replacement for aws-vault
   - grep
   - gzip
   #- git-standup
   - gnupg
   - htop
-  # Command line interface to JMESPath
-  #- jmespath/jmespath/jp
+  #- jmespath/jmespath/jp # Command line interface to JMESPath
   - less
   - libpq
   #- ktlint
   #- kubernetes-cli
-  - maven
-  - nvm
+  #- maven
+  - mise # Polyglot runtime manager (asdf rust clone)
+  #- nvm # -> mise
+  - openssl
   - python3
   - pinentry-mac
   - p7zip
-  # monitor the progress of data through a pipe
-  - pv
+  - pv # monitor the progress of data through a pipe
   - screen
   - ssh-copy-id
-  # transparent proxy meets VPN meets ssh
-  #- sshuttle
+  #- sshuttle # transparent proxy meets VPN meets ssh
   - terraform
   - terragrunt
-  - tldr
   #- tcptraceroute
   #- tmux # terminal multiplexer
 
@@ -61,42 +59,42 @@ cask_appdir: /Applications
 cask_packages:
   #- android-studio
   - boop # Quick utilizies
+  - bruno # Alternative for Postman and Insomnia
   - calibre
   #- chromium
   #- cyberduck
   - dbeaver-community
-  - docker
-  - dropbox
-  - firefox
-  #- flipper
+  #- docker
+  - orbstack # Replacement for Docker Desktop
+  #- dropbox
+  #- firefox
   - gimp
   - google-cloud-sdk
-  - google-chrome
-  #- insomnia
+  #- google-chrome
   - grandperspective # show where disk is spent
   - imageoptim # optimize images for web
   - iterm2
   - kap # record screen
-  #- openjdk@11
-  - obsidian
-  - postman
+  #- obsidian
   - raycast # alfred + maccy combined
-  - rectangle # organize windows with shortcuts
+  #- rectangle # organize windows with shortcuts
   #- robo-3t
-  #- signal
   #- soapui
-  - spotify
+  #- spotify
+  - starship # https://starship.rs/, customizable prompt for any shell
   - teamviewer
   - textmate
   - the-unarchiver
   # - vagrant
   # - virtualbox
-  - visual-studio-code
+  #- visual-studio-code
   - vlc
   #- vnc-viewer
+  #- monokle
+  #- lens
 
 mas_installed_apps:
-  - { id: 406056744, name: "Evernote" }
+  #  - { id: 406056744, name: "Evernote" }
   - { id: 803453959, name: "Slack" }
 
 mas_uninstalled_apps:
