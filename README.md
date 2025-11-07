@@ -27,7 +27,7 @@ See vars/main.yml
 
 ## Config
 
-```
+```toml
  ~/.gitconfig
 [pager]
   diff = diff-so-fancy | less --tabs=1,5 -RFX
@@ -38,8 +38,8 @@ See vars/main.yml
 
 ### dotfiles
 
-My dotfiles (https://github.com/walokra/dotfiles) are also installed into the current user's home directory under .dotfiles, including the .osx dotfile for configuring Mac OS X for ease of use. To use them, cd into ~/.dotfiles and `bash source bootstrap.sh`. To set sensible OS X defaults run also `bash ./.osx`.
+My [dotfiles](https://github.com/walokra/dotfiles) are also installed into the current user's home directory under .dotfiles, including the .osx dotfile for configuring Mac OS X for ease of use. To use them, cd into ~/.dotfiles and `bash source bootstrap.sh`. To set sensible OS X defaults run also `bash ./.osx`.
 
 ### Services
 
-- (asimov)[https://github.com/stevegrunwell/asimov]: exclude project dependencies from Time Machine. `sudo brew services start asimov`
+- [asimov](https://github.com/stevegrunwell/asimov): exclude project dependencies from Time Machine. `sudo brew services start asimov`
